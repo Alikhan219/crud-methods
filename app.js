@@ -9,18 +9,16 @@ btn.addEventListener('click', function(e){
       
      
       let list= document.createElement("li");
-      let h3= document.createElement("h3")
-      h3.textContent= inp;
-      list.appendChild(h3);
-      
+      list.innerHTML= ` 
+                          <h3>${inp}</h3>
+                         <button onclick="closetheparen(this)">X</button>
+                              `;
       list.classList.add("lists")
-      let close= document.createElement("button")
-      close.textContent= "X"
-      list.appendChild(close)
       let ul_list= document.querySelector("#ul_list");
-      ul_list.appendChild(list)
+      ul_list.appendChild(list);
 
-      close.addEventListener("click", function(){
-             list.remove();
-      })
 })
+
+function closetheparen(cuurentbtn){
+     cuurentbtn.parentElement.remove();
+}
