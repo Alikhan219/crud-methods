@@ -10,9 +10,9 @@ btn.addEventListener('click', function(e){
      
       let list= document.createElement("li");
       let h3= document.createElement("h3")
-      list.textContent= inp;
-      h3.appendChild(lists)
-      console.log(h3)
+      h3.textContent= inp;
+      list.appendChild(h3);
+      
       list.classList.add("lists")
       let close= document.createElement("button")
       close.textContent= "X"
