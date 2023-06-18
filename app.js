@@ -39,15 +39,17 @@ function editChapter(currentElement){
           let newInput= document.createElement("input")
           newInput.type= "text"
           newInput.className = "input"
+          newInput.placeholder="Add Something..."
           newInput.value= currentChapter
           currentElement.parentElement.replaceChild(newInput, currentElement.previousElementSibling)
      }
  
 }
 
-let note= document.createElement("h3");
+let note= document.createElement("h4");
           note.classList.add("empty")
-          note.textContent= "There Is Nothing To See Please Insert A Value"
+          note.textContent= "There Is Nothing To See Please Add Something!"
+          note.classList.add("empty")
 function closetheparen(cuurentbtn){
      cuurentbtn.parentElement.remove();
      if(ul_list.children.length <= 0){
