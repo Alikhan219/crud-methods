@@ -232,7 +232,12 @@ button:nth-child(3):hover{
 }
 h3{
     flex-grow: 1;
+    
+    width: 64%;
+    word-wrap: break-word;
 }
+
 .empty{
     text-align: center;
+    
 }
