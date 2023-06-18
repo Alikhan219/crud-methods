@@ -11,6 +11,7 @@ btn.addEventListener('click', function(e){
       let list= document.createElement("li");
       list.innerHTML= ` 
                           <h3>${inp}</h3>
+                          <button class="green">Edit</button>
                          <button onclick="closetheparen(this)">X</button>
                               `;
       list.classList.add("lists")

@@ -4,30 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-
-    #ul_list{
-            width: 30%;
-        }
-    .lists{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-        
-        
-    </style>
+   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    
-    <div>
-    <div>
+    <h1>Todo List</h1>
+    <div class="main">
+        
+    <div class="input">
         <input type="text" class="input">
         <button class="add-btn">Add</button>
     </div>
     <ul id="ul_list">
         <li class="lists">
             <h3>Chapter</h3>
+            <button class="green">Edit</button>
             <button onclick="closetheparen(this)">X</button>
         </li>
     </ul>
