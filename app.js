@@ -14,7 +14,7 @@ btn.addEventListener('click', function(e){
       let list= document.createElement("li");
       list.innerHTML= ` 
                           <h3>${inp}</h3>
-                          <button class="green">Edit</button>
+                          <button class="green" onclick="editChapter(this)">Edit</button>
                          <button onclick="closetheparen(this)">X</button>
                               `;
       list.classList.add("lists")
@@ -24,12 +24,30 @@ btn.addEventListener('click', function(e){
 })
 
 
+function editChapter(currentElement){
 
+     if(currentElement.textContent == "Done"){
+          currentElement.textContent= "Edit"
+          let currentValue= currentElement.previousElementSibling.value;
+          let newHead= document.createElement("h3");
+          newHead.textContent= currentValue;
+          currentElement.parentElement.replaceChild(newHead, currentElement.previousElementSibling)
+
+     }else{
+          currentElement.textContent= "Done"
+          let currentChapter= currentElement.previousElementSibling.textContent;
+          let newInput= document.createElement("input")
+          newInput.type= "text"
+          newInput.className = "input"
+          newInput.value= currentChapter
+          currentElement.parentElement.replaceChild(newInput, currentElement.previousElementSibling)
+     }
+ 
+}
 
 let note= document.createElement("h3");
           note.classList.add("empty")
           note.textContent= "There Is Nothing To See Please Insert A Value"
-
 function closetheparen(cuurentbtn){
      cuurentbtn.parentElement.remove();
      if(ul_list.children.length <= 0){
